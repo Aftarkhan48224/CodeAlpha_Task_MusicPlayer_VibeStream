@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VibeStream Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎧 VibeStream</h1>
+  </header>
+
+  <div class="player">
+    <h2 id="title">No Song Loaded</h2>
+    <h3 id="artist">Artist</h3>
+
+    <audio id="audio"></audio>
+
+    <div class="controls">
+      <button id="prev">⏮️</button>
+      <button id="play">▶️</button>
+      <button id="next">⏭️</button>
+    </div>
+
+    <div class="progress-container">
+      <span id="current-time">0:00</span>
+      <input type="range" id="progress" value="0" />
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="volume-container">
+      <label for="volume">🔊</label>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+    </div>
+
+    <ul id="playlist"></ul>
+  </div>
+
+  <div class="floating-buttons">
+    <input type="file" id="file-upload" accept="audio/*" hidden multiple />
+    <label for="file-upload" class="upload-btn">🎵 Upload Songs</label>
+    <button id="theme-toggle">🌓 Theme</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 VibeStream | Made by Aftar Khan </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
